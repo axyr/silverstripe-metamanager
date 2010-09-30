@@ -3,6 +3,10 @@
  * Static MetaGeneratorClass to generate keywords from whereever you need.
  * Returns a lowercase string with keywords ordered by occurance in content seperated with comma's
  * Use MetaGenerator::generateKeywords($string);
+ * 
+ * @Author Martijn van Nieuwenhoven
+ * @Alias Marvanni
+ * @Email info@axyrmedia.nl
  */
 class MetaGenerator{
 	
@@ -14,7 +18,6 @@ class MetaGenerator{
 	 * @var $keyword_amount
 	 * @var $exclude_words
 	 */
-	 
 	public function generateKeywords($string = '', $min_word_char = 4, $keyword_amount = 15,  $exclude_words = ''){
 		return self::calculateKeywords($string, $min_word_char, $keyword_amount,  $exclude_words);
 	}
