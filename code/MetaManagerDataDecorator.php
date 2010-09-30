@@ -1,18 +1,15 @@
 <?php
 /**
-* Adds autoupdate of the metadatafields on pagesave.
-* A checkbox is added to the Main Content tab to select wether to update the MetaDescription and MetaKeyword fields on save.
-* Default is set to yes
-*
-* You can adjust the amount of keywords, minimal word character and wich words to exclude in _config.php
-* 
-* @Author Martijn van Nieuwenhoven
-* @Alias Marvanni
-* @Email marvanni@hotmail.com
-*
-* @Silverstripe version 2.3.2
-* @package AutoMetaDataUpdater
-*/ 
+ * Adds autoupdate of the metadatafields on pagesave.
+ * A checkbox is added to the Main Content tab to select wether to update the MetaDescription and MetaKeyword fields on save.
+ * Default is set to yes
+ *
+ * You can adjust the amount of keywords, minimal word character and wich words to exclude in _config.php
+ * 
+ * @Author Martijn van Nieuwenhoven
+ * @Alias Marvanni
+ * @Email info@axyrmedia.nl
+ */ 
 
 class MetaManagerDataDecorator extends SiteTreeDecorator { 
 	
