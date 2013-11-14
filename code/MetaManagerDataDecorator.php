@@ -209,16 +209,13 @@ class MetaManagerDataDecorator extends SiteTreeDecorator {
 		if ($var) self::$show_meta_messages = $var;
 	}
 
-    function extraStatics() {
-		return array(
-			'db' => array(
-				'GenerateMetaData' => 'Int',
-			),
-            'defaults' => array(
-				'GenerateMetaData' => -1,
-			),
-		);
-	}
+   	private static $db = array(
+		'GenerateMetaData' => 'Int'
+	);
+	
+	private static $defaults = array(
+		'GenerateMetaData' => 1
+	);
 	/**
 	 * Compose string to show wich fields are set to auto update
 	 * @param string $updated_field_string  
