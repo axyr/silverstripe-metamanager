@@ -22,7 +22,7 @@ class MetaGenerator{
 		return self::calculateKeywords($string, $min_word_char, $keyword_amount,  $exclude_words);
 	}
 	
-	private function calculateKeywords($string = '', $min_word_char = 3, $keyword_amount = 15,  $exclude_words = '' ) {
+	private static function calculateKeywords($string = '', $min_word_char = 3, $keyword_amount = 15,  $exclude_words = '' ) {
 		
 		$exclude_words = explode(", ", $exclude_words);
 		//add space before br tags so words aren't concatenated when tags are stripped
