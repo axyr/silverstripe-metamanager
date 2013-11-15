@@ -18,7 +18,7 @@ class MetaGenerator{
 	 * @var $keyword_amount
 	 * @var $exclude_words
 	 */
-	public function generateKeywords($string = '', $min_word_char = 4, $keyword_amount = 15,  $exclude_words = ''){
+	public static function generateKeywords($string = '', $min_word_char = 4, $keyword_amount = 15,  $exclude_words = ''){
 		return self::calculateKeywords($string, $min_word_char, $keyword_amount,  $exclude_words);
 	}
 	
