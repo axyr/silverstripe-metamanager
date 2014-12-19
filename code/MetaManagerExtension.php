@@ -80,20 +80,17 @@ class MetaManagerExtension extends SiteTreeExtension {
 		if($this->owner->ID && $this->owner->GenerateMetaData){
 			$this->owner->MetaTitle = strip_tags($this->owner->Title);
 			
-			if($this->owner->Content){
-				$this->owner->MetaDescription = html_entity_decode(strip_tags($this->owner->Content), ENT_COMPAT , 'UTF-8');
-				if(self::$meta_desc_length > 0 && strlen($this->owner->MetaDescription) > self::$meta_desc_length) {
-					$this->owner->MetaDescription = substr($this->owner->MetaDescription, 0, self::$meta_desc_length) . "...";
-				}
-				// calculateKeywords
-				$this->owner->MetaKeywords = MetaGenerator::generateKeywords(
-												$this->owner->Content, 
-												self::$min_word_char, 
-												self::$keyword_amount, 
-												self::$exclude_words
-											);
-					
-			}	
+			$this->owner->MetaDescription = html_entity_decode(strip_tags($this->owner->Content), ENT_COMPAT , 'UTF-8');
+			if(self::$meta_desc_length > 0 && strlen($this->owner->MetaDescription) > self::$meta_desc_length) {
+				$this->owner->MetaDescription = substr($this->owner->MetaDescription, 0, self::$meta_desc_length) . "...";
+			}
+			// calculateKeywords
+			$this->owner->MetaKeywords = MetaGenerator::generateKeywords(
+											$this->owner->Content, 
+											self::$min_word_char, 
+											self::$keyword_amount, 
+											self::$exclude_words
+										);
 		}		
 	}
 }
